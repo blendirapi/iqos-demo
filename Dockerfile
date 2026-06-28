@@ -10,4 +10,5 @@ COPY . .
 EXPOSE 5173
 
 # Just run the npm script directly
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
+CMD ["npx", "vite", "--host"]

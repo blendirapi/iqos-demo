@@ -2,5 +2,14 @@ services:
   iqosdemo:
     build: .
     container_name: iqosdemo
-    ports:
-      - "80:5173"
+    expose:
+      - "5173"
+    environment:
+      - VIRTUAL_HOST=iqosdemo.alpharosso.io
+      - VIRTUAL_PORT=5173
+    networks:
+      - reverse-proxy
+
+networks:
+  reverse-proxy:
+    external: true
