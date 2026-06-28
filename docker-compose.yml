@@ -1,0 +1,6 @@
+services:
+  iqosdemo:
+    build: .
+    container_name: iqosdemo
+    ports:
+      - "80:5173"
